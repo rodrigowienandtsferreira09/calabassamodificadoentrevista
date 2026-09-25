@@ -1,0 +1,46 @@
+{
+  "name": "haras-exemplo-api",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "API da loja do Haras Exemplo",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "prisma generate && tsc",
+    "start": "node scripts/migrate-prod.cjs && node scripts/backfill-encrypt-pii.cjs && node scripts/start-prod.cjs",
+    "seed": "prisma db seed",
+    "security:audit": "npm audit --audit-level=high"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^20.0.0",
+    "@types/sanitize-html": "^2.16.1",
+    "tsx": "^4.7.1",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.975.0",
+    "@fastify/cookie": "^11.1.2",
+    "@fastify/cors": "^11.2.0",
+    "@fastify/helmet": "^13.1.1",
+    "@fastify/multipart": "^9.4.0",
+    "@fastify/rate-limit": "^10.3.0",
+    "@prisma/client": "^5.10.2",
+    "@sentry/node": "^10.47.0",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^16.6.1",
+    "fastify": "^5.12.5",
+    "image-size": "^2.0.2",
+    "jsonwebtoken": "^9.0.3",
+    "mercadopago": "^3.6.1",
+    "prisma": "^5.10.2",
+    "sanitize-html": "^2.17.2",
+    "zod": "^3.22.4"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+}

@@ -1,0 +1,31 @@
+# dependencies
+node_modules/
+
+# builds
+dist/
+web/.next/
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+*.key
+
+# typescript
+*.tsbuildinfo
+
+# local env files
+.env
+.env.*
+!.env.example
+!.env*.example
+
+# ferramentas locais
+.claude/
+.vscode/
+web/AGENTS.md
+web/CLAUDE.md

@@ -1,0 +1,2 @@
+ALTER TABLE "CoverageProduct"
+  ADD COLUMN "photos" TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[];

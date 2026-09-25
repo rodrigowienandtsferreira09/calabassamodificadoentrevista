@@ -1,0 +1,11 @@
+{
+  "name": "haras-exemplo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "web:dev": "npm run dev --prefix web",
+    "web:build": "npm run build --prefix web",
+    "web:start": "npm run start --prefix web",
+    "security:audit": "npm run security:audit --prefix backend && npm run security:audit --prefix web"
+  }
+}
